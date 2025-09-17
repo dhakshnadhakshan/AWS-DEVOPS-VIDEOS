@@ -1,0 +1,15 @@
+DEVOPS
+Jenkins-groovy script,plugins,system,credentials,tools,webhook,jobs,pipeline,freestyle
+Git-fork,gitbash,clone,config,remote,webhook,token
+Docker-resource sharing,daemon,os,kernal sharing,os+application+middleware=Dockerfile,image,container
+Kubernates-eks,image,container,pod,node,components,node port,service,pv,configmap, clusterip+nodeport+loadbalancer=loadbalancer,pod+replicaset+deployment=deployment,daemonset,namespace
+Ansible-configuration automation,master:slave,ad hoc commands=ansible+linux,playbook,role,vault,deployment,mutable
+Prometheus-add jenkins job,add node exporter job 
+Graphana-import dashboard of jenkins,eks,node exporter, port number:node1860,jenkins 9964,eks 15760,eks 17119
+Sonarqube-codetesting,
+Terraform-providers,immutable,replacement of cloudformation,statefile
+Maven-build a code
+Trivy-
+ArgoArtifact-
+Splunk-
+
