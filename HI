@@ -1,1 +1,39 @@
-HI
+=============================================================================================================================================
+KUBERNETES EKS:
+kubectl get nodes
+kubectl apply -f <name of the deployment.yaml>
+kubectl get pods
+kubectl logs <name of pods>
+kubectl exec -it <name of the pod> -- /bin/bash
+kubectl delete cluster --name <name of cluster> -region <name of region>
+kubectl get svc
+kubectl get cluster
+kubectl create namespace <name of new namespace>
+============================================================================================================================================= 
+ansible --version
+ansible all -i <slaves.txt> -m <name of module> -a "linum command"
+ansible-playbook -i <slaves.txt> <file name.yml> --check
+ansible-playbook -i <slaves.txt> <filename.yml> 
+==============================================================================================================================================
+docker --version
+docker pull <name of image> 
+docker images
+docker rm images
+docker build -t <name of Dockerfile>
+docker run -d -p 8080:80 --name <name of container> <name image>
+docker ps -a
+docker rm <name of container>
+docker exec -it <name of container> bash
+docker stop <name of container>
+docker start <name of container>
+docker restart <name of container>
+docker images prune
+docker container prune 
+docker system prune
+===========================================================================================================================================
+terraform init
+terraform validate
+terraform plan
+terraform apply -auto-approve
+terraform destroy
+=============================================================================================================================================
