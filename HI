@@ -37,3 +37,18 @@ terraform plan
 terraform apply -auto-approve
 terraform destroy
 =============================================================================================================================================
+git init 
+git add .
+git commit -m "message"
+git push origin main
+git clone http://......
+git remote add origin http://...
+git pull origin main
+git remote -v
+git status
+git checkout <name of branch>
+git branch <name of new branch>
+git config --global user.name "name"
+git config --global user.email "email"
+git branch -d <name of branch>
+=============================================================================================================================================
