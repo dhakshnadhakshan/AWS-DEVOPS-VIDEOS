@@ -1,1 +1,26 @@
+"AWS topics"
+ec2-volumes,ami,snapshot,elasticip
+s3-bucket,version controlling,object,url,strategies
+rds-msql,instance,uname pwd,login 
+vpc-private public subnet,natgateway,internategateway,routingtable,cidr 10.0.0.0/16,10.0.0.1/24,10.0.0.2/24
+route53-nameservers:hostedzone,recordset:loadbalancer,acm:verification
+loadbalancer-application loadbalancer,acm:port http to https,targer group,path, port,healthcheck,autoscalling
+iam-role,user,permission policy
+sns-topic,subscriber
+cloudwatch-watch only aws services ,matrics
+cloudtrial-watch only whole console of users gives to auditor,create trial and keep in s3 bucket, then cloudwatch enable log
+cloud front-edge location,region,cache,history,availability zone,wave length zone
+cloud formation-instead of terraform
+lambda-serverless,code run only when clicking the url
+ebs-environment,only application is ours, all platform is aws, bluegreen strategy,blue server is development, green server is production,swap url ,clone,0% downtime
+redshift-analysis,warehouse
+dynamodb-table,storage,semi structured,create table and put datas manually
+efs-only linux transfer, nfs,attach with mount via ip or dns, upload in master machine and it will be reflect in slave machines, viseversa delete also.
+ecs-elastic container service , instead of docker
+ecr-elastic container repository, instead of dockerhub
+kms-keymanagementservice
+migration snowball-vmware software to create virtual machine, ami in aws, large amout of files transfer
+code deploy-application,deploygroup,deploy agent-install,create deployment:github or s3
+code pipeline-create pipeline,automatic role create,source provider ,code build,deploystage,notification icon for sns,automatic cloudwatch
+code build-to build a file for executable file as war jar
 
