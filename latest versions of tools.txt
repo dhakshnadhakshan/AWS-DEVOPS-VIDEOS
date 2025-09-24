@@ -1,0 +1,13 @@
+java
+python
+nodejs
+html
+jenkins
+git
+maven
+sonarqube
+ansible
+terraform
+prometheus
+graphana
+kubernates eks
