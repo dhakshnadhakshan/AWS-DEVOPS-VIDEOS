@@ -1,0 +1,22 @@
+SSH	22	TCP	
+RDP (Windows)	3389
+HTTP	80	TCP	Standard web traffic
+HTTPS	443	TCP	Secure web traffic
+HTTP Alt	8080	TCP	Common for test/dev web servers or proxies
+Git	9418	TCP	Git protocol (less common; HTTPS preferred)
+Jenkins	8080	TCP	Default Jenkins web interface
+SonarQube	9000	TCP	Code quality dashboard
+Ansible (SSH-based)	22	TCP	Ansible connects via SSH
+Docker daemon	2375 (insecure) / 2376 (TLS)	TCP	Docker remote API
+Kubernetes API Server	6443	TCP	Main communication endpoint for kubectl, etc.
+Prometheus	9090	TCP	Prometheus web UI and API
+Grafana	3000	TCP	Dashboard access
+Node Exporter	9100	TCP	Prometheus exporter for host metrics
+Alertmanager	9093	TCP	Manages alerts for Prometheus
+MySQL / MariaDB	3306	TCP	RDS or self-managed MySQL DB
+PostgreSQL	5432	TCP	RDS PostgreSQL
+MongoDB	27017	TCP	NoSQL DB
+Redis	6379	TCP	In-memory data store
+Elasticsearch	9200	TCP	REST API
+Kibana	5601	TCP	Web interface for Elasticsearch data
+Load Balancers	80 / 443 (HTTP/HTTPS)	Front-facing
