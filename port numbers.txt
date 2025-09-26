@@ -7,7 +7,6 @@ Git	9418	TCP	Git protocol (less common; HTTPS preferred)
 Jenkins	8080	TCP	Default Jenkins web interface
 SonarQube	9000	TCP	Code quality dashboard
 Ansible (SSH-based)	22	TCP	Ansible connects via SSH
-Docker daemon	2375 (insecure) / 2376 (TLS)	TCP	Docker remote API
 Kubernetes API Server	6443	TCP	Main communication endpoint for kubectl, etc.
 Prometheus	9090	TCP	Prometheus web UI and API
 Grafana	3000	TCP	Dashboard access
