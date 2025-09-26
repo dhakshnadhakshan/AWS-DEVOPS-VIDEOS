@@ -1,13 +1,13 @@
-java
-python
-nodejs
-html
-jenkins
-git
-maven
-sonarqube
-ansible
-terraform
-prometheus
-graphana
-kubernates eks
+java  21,17
+python 3.12
+nodejs 24.8.0,22.15.0
+html 5.3
+jenkins 2.526,2.516.2
+git 2.50.1 
+maven 3.9.9
+sonarqube 10.7
+ansible 11.0
+terraform 1.8.0
+prometheus 3.3.1
+graphana 12.2
+kubernates eks 1.33
