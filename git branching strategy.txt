@@ -1,0 +1,16 @@
+green colour with star symbol is current working branch.
+  commit means changes in code.
+git branch 
+git branch developer
+git branch test
+git branch deploy
+git branch debug
+git checkout debug
+git merge debug test - all the commits and files will be copied 
+git rebase debug test - sequence of commits will be copies
+git cherrypick id - particular commit will be  copy
+git stash  - to keep a changes in backstage. so that we can use later. before git commit.
+git stash pop - to get into staging area
+git stash list - to see list of stash files
+git status
+git brach -d debug
