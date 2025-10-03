@@ -15,3 +15,4 @@ git stash list - to see list of stash files
 git status
 git brach -d debug
 to avoide conflict merge-first pull from remote repository. then make changes then push. 
+github actions- for cicd
