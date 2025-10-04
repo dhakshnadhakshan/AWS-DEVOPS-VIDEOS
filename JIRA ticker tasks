@@ -1,0 +1,73 @@
+Perfect — as an AWS DevOps Engineer, your JIRA tickets will mostly involve:
+
+Automating infrastructure
+
+Managing CI/CD pipelines
+
+Maintaining cloud resources
+
+Ensuring reliability, scalability, and security
+
+Troubleshooting issues in production or staging environments
+
+🧾 Common JIRA Ticket Types for AWS DevOps Engineers
+
+Let’s organize this based on typical categories.
+
+⚙️ CI/CD Pipeline Work (Jenkins, CodePipeline, GitHub, etc.)
+Ticket Example	What You’ll Do
+"Integrate SonarQube quality gate in Jenkins pipeline"	Update Jenkinsfile to include quality checks before deployment
+"Fix CodeBuild job failure on PR builds"	Check logs, tweak buildspec.yml, maybe fix IAM or environment
+"Add rollback strategy to CodeDeploy"	Implement Blue/Green or Canary deployment strategy
+"Migrate pipeline from Jenkins to AWS CodePipeline"	Recreate pipeline using CodeCommit, CodeBuild, CodeDeploy
+☁️ Infrastructure as Code (IaC) - Terraform / CloudFormation
+Ticket Example	What You’ll Do
+"Provision S3 buckets with versioning & encryption"	Write Terraform or CF template, test and deploy
+"Create VPC, subnets, and routing for new app"	Define network architecture using IaC
+"Manage IAM roles and policies for ECS services"	Use Terraform to create secure and specific IAM roles
+"Update Terraform module to include tagging policy"	Add standard tags for cost allocation or compliance
+☸️ Kubernetes (EKS)
+Ticket Example	What You’ll Do
+"Deploy microservice X to EKS using Helm"	Create Helm chart, define values.yaml, deploy to cluster
+"Enable HPA for backend service"	Configure CPU/memory-based auto-scaling
+"Fix CrashLoopBackOff in payment service pod"	Check logs, environment variables, container image
+"Upgrade EKS cluster to 1.26"	Plan upgrade, test on staging, execute with minimal downtime
+🔐 Security / Secrets / IAM
+Ticket Example	What You’ll Do
+"Audit IAM roles for least privilege"	Review policies and trim unnecessary permissions
+"Integrate Secrets Manager with ECS task"	Update task definition to read secrets securely
+"Rotate expired GitHub token in pipeline"	Replace credentials in parameter store or Jenkins credentials
+📊 Monitoring, Logging, and Alerting
+Ticket Example	What You’ll Do
+"Create CloudWatch alarm for CPU > 80% on EC2"	Set up alarm and connect to SNS for notifications
+"Build Grafana dashboard for staging environment"	Use Prometheus data source, create visualizations
+"Configure log aggregation for Lambda functions"	Ensure logs are stored in CloudWatch, add metric filters
+"Alert on 5xx errors from ALB"	Use AWS WAF + CloudWatch metrics to trigger alerts
+🛠️ Incident / Outage Response
+Ticket Example	What You’ll Do
+"Investigate failed deployment to ECS"	Check logs, task definition, IAM permissions
+"Write RCA for Oct 3rd staging downtime"	Analyze root cause, prepare RCA report, recommend fixes
+"Fix broken Route 53 DNS record for frontend"	Update DNS entry, reduce TTL for faster propagation
+🧼 Maintenance Tasks
+Ticket Example	What You’ll Do
+"Clean up unused EBS volumes in dev account"	Identify unused resources and deprovision them
+"Update Jenkins agents to use latest AMI"	Modify launch template or ASG config
+"Automate daily DB snapshot for RDS"	Use backup policies or Lambda scheduler
+🎯 Tips to Handle JIRA Tickets Like a Pro
+Tip	Why It Matters
+Break down large tickets into subtasks	Easier to estimate and manage
+Comment with progress updates	Keeps manager and team in sync
+Log blockers early	Avoid surprises near deadlines
+Link to PRs or deployment logs	Provides traceability
+Close with a summary	Helps future audits or RCA reviews
+✅ Final Thoughts
+
+As an AWS DevOps Engineer, your tickets will usually be:
+
+🔧 Task-based (create/update something)
+
+🧯 Reactive (fix something broken)
+
+🧪 Investigative (find root causes or test approaches)
+
+🧠 Strategic (optimize or plan for scale/security)
