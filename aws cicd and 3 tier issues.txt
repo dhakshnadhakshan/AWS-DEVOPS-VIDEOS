@@ -1,23 +1,15 @@
 Great! Let’s now look at issues that may arise in an AWS-based CI/CD pipeline and in a 3-tier architecture, even after a successful setup — just like you asked.
 
 ✅ You've Already Built It — So Why Would Issues Happen?
-
 Same logic applies here: Even if it's working today, external and internal factors can cause issues tomorrow. Let’s break it down, starting with AWS CI/CD and then 3-tier architecture.
 
 🛠️ 1. AWS CI/CD Pipeline – Issues After Setup
-
 Assuming your pipeline uses AWS services like:
-
 CodeCommit / GitHub (source control)
-
 CodeBuild (build)
-
 CodeDeploy / CodePipeline (deployment)
-
 ECS / EC2 / EKS (runtime)
-
 CloudWatch / SNS (monitoring/alerting)
-
 S3 / IAM / Secrets Manager (storage/security)
 
 🔹 Possible Issues (Even After Successful Setup)
@@ -35,41 +27,25 @@ CloudWatch Alerting	No alerts configured or misconfigured threshold
 SSL/TLS Certs	ACM certs expire and HTTPS breaks
 Lambda or Step Function Failures	Used for approvals or rollbacks, but fails silently
 🔄 Who or What Causes These?
-
 Someone changes IAM role/policy by mistake
-
 AWS rotates keys/secrets
-
 GitHub webhook fails to trigger CodePipeline
-
 An AMI or Docker image is deprecated
-
 AWS service has an outage or update
-
 DNS configuration changes
 
 ✅ How to Handle It?
-
 Enable CloudWatch alarms for every pipeline stage
-
 Set up SNS notifications on pipeline failure
-
 Automate secret rotation and integration
-
 Use parameter store for environment configs
-
 Use versioned templates (IaC) like CloudFormation or Terraform
-
 Use rollback strategies (e.g., CodeDeploy Blue/Green)
 
 🏛️ 2. 3-Tier Architecture – Issues That May Arise
-
 Your 3-tier architecture likely includes:
-
 Tier 1: Presentation (Frontend) — React/Angular, hosted on S3 + CloudFront or EC2
-
 Tier 2: Application (Backend) — Node.js, Java, .NET on EC2 or ECS
-
 Tier 3: Data (Database) — RDS (MySQL, PostgreSQL), DynamoDB, or Aurora
 
 🔹 Possible Issues in 3-Tier Setup
@@ -85,17 +61,11 @@ Secrets	DB password changed but not updated in app (if not using Secrets Manager
 DNS/Route53	DNS not updated after deployment or TTL delay
 Monitoring	CloudWatch doesn’t alert on high latency or errors if not configured right
 🔄 Who or What Causes These?
-
 Manual misconfig (e.g., deleting or editing a security group)
-
 Code or config changes during deployments
-
 AWS infra updates or outages
-
 External attacks (e.g., DDoS, injection, auth bypass)
-
 Lack of autoscaling config
-
 Overlooked costs causing resource limits
 
 📊 Monitoring Tools You Should Use
@@ -106,11 +76,7 @@ AWS Config	Detects config changes and compliance
 AWS Trusted Advisor	Recommends security, performance, and cost improvements
 Prometheus + Grafana (if running in EKS/EC2)	Custom metrics and dashboards
 ✅ Summary
-
 Even if your AWS CI/CD + 3-tier architecture is working fine today:
-
 Changes in code, users, AWS, or tools can cause future issues.
-
 Most problems happen due to external updates, token expiry, network issues, misconfigs, or scaling bottlenecks.
-
 Use monitoring, alerting, secrets management, and IaC to catch and recover quickly.
