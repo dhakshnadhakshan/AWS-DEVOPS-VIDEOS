@@ -1,0 +1,15 @@
+# Add Bitnami repo
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+
+# Search for nginx
+helm search repo nginx
+
+# Install nginx
+helm install my-nginx bitnami/nginx
+
+# Check status
+helm status my-nginx
+
+# Uninstall
+helm uninstall my-nginx
