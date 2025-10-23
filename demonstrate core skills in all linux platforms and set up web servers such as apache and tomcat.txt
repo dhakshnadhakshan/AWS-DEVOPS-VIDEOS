@@ -1,0 +1,143 @@
+🧠 Part 1: Core Linux Skills
+
+These are foundational across all Linux distributions (Ubuntu, Debian, CentOS, RHEL, SUSE, etc.).
+
+1. System Navigation & File Management
+# Basic navigation
+pwd              # Show current directory
+ls -la           # List all files with permissions
+cd /var/www      # Move to a directory
+
+# File operations
+cp file1.txt /tmp/           # Copy file
+mv file1.txt file2.txt       # Rename or move file
+rm file2.txt                 # Remove file
+mkdir /opt/test              # Create directory
+
+2. User & Permission Management
+# Add a new user and set password
+sudo adduser webadmin
+sudo passwd webadmin
+
+# Add to sudo group
+sudo usermod -aG sudo webadmin
+
+# File ownership & permissions
+sudo chown webadmin:webadmin /var/www/html
+sudo chmod 755 /var/www/html
+
+3. Process & Service Control
+# Check running processes
+ps aux | grep apache
+
+# Manage services
+sudo systemctl start apache2
+sudo systemctl enable apache2
+sudo systemctl status apache2
+
+4. Networking
+# Check IP and listening ports
+ip a
+sudo netstat -tulnp | grep 80
+
+# Firewall rules (UFW example)
+sudo ufw allow 80/tcp
+sudo ufw enable
+sudo ufw status
+
+5. Package Management
+
+Ubuntu/Debian:
+
+sudo apt update && sudo apt upgrade -y
+sudo apt install apache2 tomcat9 -y
+
+
+CentOS/RHEL:
+
+sudo yum update -y
+sudo yum install httpd tomcat -y
+
+🌐 Part 2: Apache Web Server Setup
+1. Install Apache
+# Ubuntu/Debian
+sudo apt install apache2 -y
+
+# CentOS/RHEL
+sudo yum install httpd -y
+
+2. Start and Enable Service
+sudo systemctl start apache2     # or httpd
+sudo systemctl enable apache2
+
+3. Test Web Server
+
+Open a browser and go to:
+http://<your_server_ip>
+
+You should see the Apache default page.
+
+4. Host a Website
+sudo mkdir -p /var/www/mywebsite
+sudo nano /var/www/mywebsite/index.html
+
+
+Add sample HTML:
+
+<h1>Hello from Apache on Linux!</h1>
+
+
+Then configure a Virtual Host (Ubuntu example):
+
+sudo nano /etc/apache2/sites-available/mywebsite.conf
+
+
+Add:
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@mywebsite.com
+    DocumentRoot /var/www/mywebsite
+    ServerName mywebsite.com
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+
+Enable and reload:
+
+sudo a2ensite mywebsite.conf
+sudo systemctl reload apache2
+
+☕ Part 3: Apache Tomcat Setup
+1. Install Tomcat
+
+Ubuntu:
+
+sudo apt install tomcat9 tomcat9-admin -y
+
+
+CentOS:
+
+sudo yum install tomcat tomcat-webapps tomcat-admin-webapps -y
+
+2. Start and Enable
+sudo systemctl start tomcat9   # or tomcat
+sudo systemctl enable tomcat9
+
+3. Test
+
+Go to:
+
+http://<your_server_ip>:8080
+
+
+You should see the Tomcat landing page.
+
+4. Deploy a Web App
+
+Copy your WAR file to Tomcat’s webapps folder:
+
+sudo cp myapp.war /var/lib/tomcat9/webapps/
+
+
+It will auto-deploy.
